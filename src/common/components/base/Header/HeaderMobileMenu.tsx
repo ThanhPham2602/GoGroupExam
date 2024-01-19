@@ -1,22 +1,18 @@
 "use client";
 import React, { useContext } from "react";
 import Image from "next/image";
-import { TOP_BAR_TEXT } from "@/config/text";
+
 import Link from "next/link";
-import { HomeContext } from "@/context/home/HomeProvider";
+// import { HomeContext } from "@/context/home/HomeProvider";
+import { ICON_MENU, LOGO } from "@/src/config/img";
 
 const HeaderMobileMenu: React.FC = () => {
-  const { dispatch } = useContext(HomeContext);
+  // const { dispatch } = useContext(HomeContext);
 
-  const handleClickBtnMenu = () => {
-    dispatch({ type: "setDrawerOpen" });
-  };
+  // const handleClickBtnMenu = () => {
+  //   dispatch({ type: "setDrawerOpen" });
+  // };
 
-  const handleClickBtnSearch = () => {
-    dispatch({
-      type: "setShowModalSearch",
-    });
-  };
 
   return (
     <nav className="flex justify-between">
@@ -24,7 +20,7 @@ const HeaderMobileMenu: React.FC = () => {
         <Link className="flex justify-center cursor-pointer" href={"/"}>
           <Image
             alt="logo-header"
-            src={"logoGoGroup.png"}
+            src={LOGO}
             width={135}
             height={28}
           ></Image>
@@ -32,14 +28,14 @@ const HeaderMobileMenu: React.FC = () => {
       </div>
       <div
         className="flex align-middle cursor-pointer"
-        onClick={handleClickBtnMenu}
+        // onClick={handleClickBtnMenu}
       >
         <Image
           alt="menu-btn"
-          src={"menu-btn.svg"}
-          width={20}
-          height={18}
-        ></Image>
+          src={ICON_MENU}
+          width={32}
+          height={32}
+        />
       </div>
     </nav>
   );
