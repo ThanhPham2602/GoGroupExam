@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+ol,
+ul {
+  list-style: revert;
+  list-style-position: inside;
+}
+
+/* responsive */
+@media only screen and (min-width: 1024px) {
+  .hideInDesktop {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hideInTablet {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .hideInMobile {
+    display: none;
+  }
+}
+
+
+
+/* .ant-tabs-tabpane {
+  padding: 0 !important;
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+  position: relative;
+  margin-top: 12px;
+}
+
+.block-app {
+  animation: go_up_block 0.9s forwards;
+}
+
+@keyframes go_up {
+  from {
+    transform: translateY(30%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+} */
